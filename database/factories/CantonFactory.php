@@ -17,7 +17,12 @@ class CantonFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->randomElement([
+                'Canton Sabana San Juan Abajo',
+                'Canton Sabana San Juan Arriba',
+                'Canton El Almendro',
+                'Los Arenales']),
+            'status' => 1
         ];
     }
 }

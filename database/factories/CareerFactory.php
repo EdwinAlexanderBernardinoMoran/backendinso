@@ -17,7 +17,14 @@ class CareerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->randomElement([
+                'Desarrollo de Software',
+                'Ingeniería en Sistemas',
+                'Ingeniería en Electrónica',
+                'Ingeniería en Mecatrónica',
+                'Ingeniería en Telecomunicaciones']),
+            'status' => 1
         ];
     }
 }
+

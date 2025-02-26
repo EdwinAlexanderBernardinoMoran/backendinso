@@ -17,7 +17,11 @@ class ZoneFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->randomElement([
+                'Rural',
+                'Urbana',
+            ]),
+            'status' => 1
         ];
     }
 }

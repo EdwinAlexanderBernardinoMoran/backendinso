@@ -17,7 +17,13 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->randomElement([
+                '1°',
+                '2°',
+                '3°',
+                '4°',
+                '5°']),
+            'status' => 1
         ];
     }
 }
